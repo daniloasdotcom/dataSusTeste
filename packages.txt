@@ -1,3 +1,4 @@
 r-base
 r-base-dev
 r-rfsaldanha/microdatasus
+git+https://github.com/rfsaldanha/microdatasus#egg=package-two
