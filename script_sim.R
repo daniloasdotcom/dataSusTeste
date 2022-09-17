@@ -17,7 +17,11 @@ sim.es <- fetch_datasus(year_start = 2020,
                         uf = "ES", 
                         information_system = "SIM-DO")
 
+
+
 sim.es <- process_sim(sim.es)
+
+head(sim.es$CAUSABAS)
 
 View(sim.es)
 
