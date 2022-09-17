@@ -17,8 +17,10 @@ st.write(result1)
 process1 = subprocess.Popen(["Rscript", "hello.R"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 result1 = process1.communicate()
 
+process2 = subprocess.Popen(["Rscript", "fetch_datasus.R"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+
 if st.button('Extrair dados'):
-    dadosordenados = process1.communicate()
+    dadosordenados = process2.communicate()
     st.write(dadosordenados)
 
 
