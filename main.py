@@ -14,11 +14,16 @@ result1 = process1.communicate()
 st.write(result1)
 
 
+process1 = subprocess.Popen(["Rscript", "hello.R"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+result1 = process1.communicate()
+
+if st.button('Extrair dados'):
+    dadosordenados = process1.communicate()
+    st.write(dadosordenados)
 
 
 
-
-'''
+"""
 st.sidebar.markdown('')
 st.sidebar.markdown('')
 st.sidebar.markdown('**Coordinator**: [Danilo Andrade](https://daniloas.com/)')
@@ -107,4 +112,4 @@ st.download_button(
     "text/csv",
     key='download-csv'
 )
-'''
+"""
